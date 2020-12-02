@@ -1,2 +1,4 @@
+include ':repository'
+include ':commons'
 include ':app'
 rootProject.name = "Pokedex"
