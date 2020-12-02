@@ -27,6 +27,8 @@ android {
 
 ext {
     dagger = "2.29.1"
+
+    graphql = "2.4.5"
 }
 
 dependencies {
@@ -42,4 +44,7 @@ dependencies {
     api "com.google.dagger:dagger:$dagger"
     kapt "com.google.dagger:dagger-compiler:$dagger"
 
+    //graphql
+    implementation "com.apollographql.apollo:apollo-runtime:$graphql"
+    implementation "com.apollographql.apollo:apollo-normalized-cache-sqlite:$graphql"
 }
