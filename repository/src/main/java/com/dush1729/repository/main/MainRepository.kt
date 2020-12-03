@@ -12,7 +12,12 @@ class MainRepository @Inject constructor(private val apolloClient: ApolloClient)
             if (it.errors?.isNotEmpty() == true) {
                 Observable.error(Throwable("Error: fetching pokemon. ${it.errors}"))
             } else {
-                Observable.just(it.data?.pokemon())
+                val pokemon = it.data?.pokemon()
+                if(pokemon == null) {
+                    Observable.error(Throwable("$pokemonName not found in database"))
+                } else {
+                    Observable.just(it.data?.pokemon())
+                }
             }
         }
     }
