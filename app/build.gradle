@@ -26,6 +26,8 @@ android {
 }
 
 ext {
+    cardview = "1.0.0"
+
     dagger = "2.29.1"
 
     glide = "4.11.0"
@@ -62,7 +64,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide"
 
-    //graphql
-    implementation "com.apollographql.apollo:apollo-runtime:$graphql"
-    implementation "com.apollographql.apollo:apollo-normalized-cache-sqlite:$graphql"
+    //cardview
+    implementation "androidx.cardview:cardview:$cardview"
 }
