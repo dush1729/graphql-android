@@ -34,6 +34,7 @@ class MainActivity : BaseActivity<IMainView, MainState, IMainPresenter>(), IMain
         Toast.makeText(this, error.message.toString(), Toast.LENGTH_LONG).show()
     }
 
+    // TODO 4 show fetched data
     override fun onPokemonFetched(pokemon: GetPokemonQuery.Pokemon) {
         Glide.with(ivPhoto.context)
             .load(pokemon.image())

@@ -1,3 +1,4 @@
+# TODO 2 adding schema & queries
 query GetPokemon($pokemonName: String!) {
   pokemon(name: $pokemonName) {
     id

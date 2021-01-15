@@ -65,6 +65,8 @@ class RepositoryModule(private val application: Application) {
         return OkHttpClient.Builder().build()
     }
 
+
+    // TODO 1 provide apollo client
     @Singleton
     @Provides
     fun provideApolloClient(
